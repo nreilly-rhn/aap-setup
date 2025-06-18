@@ -10,7 +10,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: aap/pipelines-configuration
+    path: pipelines/pipelines-configuration
     repoURL: https://github.com/nreilly-rhn/aap-setup
     targetRevision: main
   syncPolicy:

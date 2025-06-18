@@ -10,7 +10,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: aap/pipelines-operator
+    path: pipelines/pipelines-operator
     repoURL: https://github.com/nreilly-rhn/aap-setup
     targetRevision: main
   syncPolicy:
