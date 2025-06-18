@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cicd
+  namespace: openshift-gitops
+spec:
+  project: aap
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    path: /
+    repoURL: https://github.com/nreilly-rhn/aap-setup
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
