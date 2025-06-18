@@ -1,14 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: aap
+  annotations:
+    argocd.argoproj.io/sync-wave: "10"
+  name: pipelines-configuration
   namespace: openshift-gitops
 spec:
   project: default
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: aap
+    path: aap/pipelines-configuration
     repoURL: https://github.com/nreilly-rhn/aap-setup
     targetRevision: main
   syncPolicy:
