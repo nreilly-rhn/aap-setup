@@ -17,7 +17,7 @@ dependencies:
 #    - ENV PKGMGR="/usr/bin/microdnf"
     # copy a custom pip.conf to override the location of the PyPI content
     # remove the default UBI repository definition
-    - RUN rm -f /etc/yum.repos.d/ubi.repo
+#    - RUN rm -f /etc/yum.repos.d/ubi.repo
     # copy the hub CA certificate and update the trust store
     # if needed, uncomment to add a custom RPM repository configuration
     #- ADD _build/configs/custom.repo /etc/yum.repos.d/custom.repo
