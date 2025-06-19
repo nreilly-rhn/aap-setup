@@ -12,8 +12,8 @@ dependencies:
   #- src: files/custom.repo
   #  dest: configs
 
-additional_build_steps:
-  prepend_base:
+#additional_build_steps:
+#  prepend_base:
 #    - ENV PKGMGR="/usr/bin/microdnf"
     # copy a custom pip.conf to override the location of the PyPI content
     # remove the default UBI repository definition
